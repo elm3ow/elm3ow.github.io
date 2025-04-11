@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" 
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        
+        <style>
+            .playfair-display-<uniquifier> {
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            .roboto-slab-<uniquifier> {
+                font-family: "Roboto Slab", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            body {
+                font-family: "Roboto Slab", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                background-color: #fff8ed;
+            }
+            .headerbar {
+                display:flex;
+                margin-bottom: 2%;
+                padding-bottom: 1%;
+                border-bottom: 1px solid #0b6623;
+            }
+            .titlename {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                left: 2%;
+                width: 30%;
+                text-align: center;
+            }
+            #portfolio {
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                text-decoration: none;
+	            color: #0b6623;
+                font-size: 2.5vw;
+                font-weight: normal;
+                text-align: center;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+            }
+            #portfolio:hover {
+                background-color: #0b6623;
+			    font-size: 3vw;
+			    border-radius: 5px;
+                color: white;
+            }
+            .namedescription {
+                font-size: 1.5vw;
+                font-weight: normal;
+                text-align: center;
+            }
+            .navbar {
+                position:absolute;
+                right: 0;
+                width: 60%;
+                margin-top: 1%;
+                font-size: 1.6vw;
+                padding-right: 1%;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            nav ul {
+	            list-style: none;
+	            text-align: end;
+            }
+            nav ul li {
+	            display: inline;
+	            margin: 0 0.8vw;
+            }
+            .portnav {
+                text-decoration: none;
+	            color: #0b6623;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+            }
+            .portnav:hover {
+                background-color: #0b6623;
+			    font-size: 1.9vw;
+			    border-radius: 5px;
+                color: white;
+            }
+            .headernav {
+	            text-decoration: none;
+	            color: black;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+		    }
+		    .headernav:hover {
+			    background-color: #0b6623;
+			    font-size: 1.9vw;
+			    border-radius: 5px;
+                color: white;
+		    }
+            .footernav {
+                display: flex;
+                position:absolute;
+                justify-content: center;
+                text-align: center;
+                width: 99%;
+                font-size: 1.6vw;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                border-top: 1px solid #0b6623;
+                left: 0;
+            }
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            main {
+                animation: fadeInUp 1.3s ease-in-out;
+            }
+		    .gallery {
+			    display: flex;
+			    flex-wrap: wrap;
+			    justify-content: center;
+			    align-items: center;
+			    text-align: center;
+    		    padding: 1%;
+			    margin-left: 5%;
+			    margin-right: 5%;
+			    margin-bottom: 2%;
+			    border-bottom: 1px solid #0b6623;
+		    }
+		    .gallery h2 {
+			    margin-left: 30vw;
+			    margin-right: 30vw;
+		    }
+		    .gallery figure {
+                display: flex;
+                flex-wrap: wrap;
+                width: 30vw;
+    		    padding: 1%;
+			    margin-top: 1%;
+                justify-content: center;
+		    }
+            .gallery1 {
+			    display: flex;
+			    flex-wrap: wrap;
+			    justify-content: center;
+			    align-items: center;
+			    text-align: center;
+    		    padding: 1%;
+			    margin-left: 5%;
+			    margin-right: 5%;
+		    }
+		    .gallery1 h2 {
+			    margin-left: 30vw;
+			    margin-right: 30vw;
+		    }
+		    .petshop {
+                padding: 1%;
+                margin-top: 1%;
+                display: flex;
+                flex-wrap: wrap;
+                width: 40%;
+                justify-content: center;
+                text-align: center;
+		    }
+		    .title {
+			    color: #0b6623;
+			    text-align: center;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+                font-size: 2vw;
+            }
+            .title:hover {
+                background-color: #0b6623;
+			    font-size: 2.5vw;
+			    border-radius: 5px;
+                color: white;
+            }
+		    figcaption {
+			    color: black;
+			    text-align: center;
+                font-size: 1.5vw;
+                padding-top: 2.5vw;
+		    }
+		    @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+                100% {
+                    opacity: 1;
+                        transform: translateY(0);
+                }
+            }
+            .images {
+                display:flex;
+    		    padding: 1%;
+                max-width: 80vw;
+			    border-radius: 7px;
+                text-align: center;
+            }
+            img {
+                width: 100%;
+                border-radius: 5px;
+                animation: fadeInUp 1.5s ease-in-out;
+                transition: tranform 1.5s ease;
+                display: flex;
+    		    justify-content: center;
+    		    align-items: flex-start;
+			    border: 1px solid #0b6623;
+            }
+            img:hover {
+                transform: scale(1.3);
+            }
+            .animated-vid {
+                max-width: 30vw;
+                border-radius: 5px;
+                animation: fadeInUp 1.5s ease-in-out;
+                transition: tranform 1.5s ease;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                border: 1px solid #0b6623;
+            }
+            .animated-vid:hover {
+                transform: scale(1.3);
+            }
+            .petshopvid {
+                max-width: 35vw;
+                max-height: auto;
+                border-radius: 5px;
+                animation: fadeInUp 1.5s ease-in-out;
+                transition: tranform 1.5s ease;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                border: 1px solid #0b6623;
+            }
+            .petshopvid:hover {
+                transform: scale(1.3);
+            }
+		    .gallery {
+		    	animation: fadeInUp 1.5s ease-in-out;
+		    }
+            .gallery1 {
+		    	animation: fadeInUp 1.5s ease-in-out;
+		    }
+            @keyframes colorExample {
+                0% {color: #0b6623;}
+                25% {color: rgb(70, 175, 101);}
+                50% {color: rgb(25, 206, 137);}
+                75% {color: rgb(70, 175, 101);}
+                100% {color: #0b6623;}
+            }
+            .porttitle {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                border-radius: 30px;
+            }
+            .portheading {
+                text-align: center;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                font-size: 3vw;
+                font-weight: normal;
+                color: #0b6623;
+                line-height: 1;
+                animation: colorExample 3s ease-in-out infinite;
+            }
+            .gallerytitle {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+            .galtitle {
+                font-size: 2vw;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+                color: #0b6623;
+            }
+            .galtitle:hover {
+                background-color: #0b6623;
+			    font-size: 2.3vw;
+			    border-radius: 5px;
+                color: white;
+            }
+            @media screen and (max-width:2560px) {
+                .animated-image {
+                    width: 45vw;
+                }
+                .animated-vid {
+                    width: 50vw;
+                }
+                .petshopvid {
+                    width: 50vw;
+                }
+            }
+            @media screen and (max-width:1440px) {
+                .animated-image {
+                    width: 31vw;
+                }
+                .animated-vid {
+                    width: 50vw;
+                }
+                .petshopvid {
+                    width: 50vw;
+                }
+            }
+            @media screen and (max-width:320px) {
+                .animated-vid {
+                    width: 45vw;
+                }
+                .petshopvid {
+                    width: 50vw;
+                }
+                .footernav {
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    justify-items: center;
+                    max-width: 100%;
+                }
+                .footernav nav ul {
+                    padding: 0;
+                }
+                .title {
+                    font-size: 3vw;
+                }
+                .title:hover {
+                    font-size: 3.5vw;
+                }
+                .galtitle {
+                    font-size: 3vw;
+                }
+                .galtitle:hover {
+                    font-size: 3.5vw;
+                }
+            }
+
+        </style>
+	</head>
+
+	<body>
+    <header>
+        <div class="headerbar">
+
+            <div class="titlename">
+                <a href="index.html" id="portfolio" target="_blank">ELMO MAGTANGOB<br></a>
+                <article class="namedescription">BSIT 1-Y2-6</article>
+            </div>
+
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="headernav" target="_blank">HOME</a></li>
+                        <li>|</li>
+                        <li><a href="about.html" class="headernav" target="_blank">ABOUT</a></li>
+                        <li>|</li>
+                        <li><a href="#portfolio" class="portnav">PORTFOLIO</a></li>
+                        <li>|</li>
+                        <li><a href="contact.html" class="headernav" target="_blank">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="porttitle">
+            <h1 class="portheading">Portfolio Media</h1>
+        </div>
+        
+        <section id="featured">
+			<div class="gallery">
+			<h2 class="title">Dev C Projects</h2>
+				<figure class="images">
+					<img class="animated-image" src="images\calcu-ave.png" alt="Dev C Project 1"><br></a>
+					<figcaption>Super Calculator using Dev C++<br>- Average Computation</figcaption>
+					<br>
+				</figure>
+				<figure class="images">
+					<img class="animated-image" src="images\calcu-smol.png" alt="Featured Product 2"><br></a>
+					<figcaption>Super Calculator using Dev C++<br>- Smallest Number</figcaption>
+					<br>
+				</figure >
+				<figure class="images">
+					<img class="animated-image" src="images\calcu-facto.png" alt="Featured Product 3"><br></a>
+					<figcaption>Super Calculator using Dev C++<br>- Factorial of Sum</figcaption>
+					<br>
+				</figure>
+                <figure class="images">
+					<img class="animated-image" src="images\calcu-square.png" alt="Featured Product 3"><br></a>
+					<figcaption>Super Calculator using Dev C++<br>- Square of Numbers</figcaption>
+					<br>
+				</figure>
+			</div>
+        </section>
+
+        <!-- Sales Gallery Section -->
+        <section id="sales">
+			<div class="gallery">
+			<h2 class="title">HTML Animations</h2>
+				<figure class="images">
+                    <video class="animated-vid" controls>
+                        <source src="animations\animation1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>HTML Animations<br>Examples 1-3</figcaption>
+					<br>
+				</figure>
+                <figure class="images">
+                    <video class="animated-vid" controls>
+                        <source src="animations\animation2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>HTML Animations<br>Examples 4-5</figcaption>
+					<br>
+				</figure>
+                <figure class="images">
+                    <video class="animated-vid" controls>
+                        <source src="animations\animation3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>HTML Animations<br>Examples 6-8</figcaption>
+					<br>
+				</figure>
+                <figure class="images">
+                    <video class="animated-vid" controls>
+                        <source src="animations\animation4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>HTML Animations<br>Examples 9-10</figcaption>
+					<br>
+				</figure>
+			</div>
+        </section>
+
+        <!-- Regular Gallery -->
+        <section id="regular">
+			<div class="gallery1">
+                <div class="gallerytitle">
+                    <h2 class="galtitle">HTML <br>Petshop Project</h2>
+                </div>
+            <figure class="petshop">
+                <video class="petshopvid" controls>
+                    <source src="project\petville1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Petshop Project<br>Overview</figcaption>
+                <br>
+            </figure>
+            <figure class="petshop">
+                <video class="petshopvid" controls>
+                    <source src="project\petville2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Petshop Project<br>Intro</figcaption>
+                <br>
+            </figure>
+            <figure class="petshop">
+                <video class="petshopvid" controls>
+                    <source src="project\petville3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Petshop Project<br>Gallery</figcaption>
+                <br>
+            </figure>
+            <figure class="petshop">
+                <video class="petshopvid" controls>
+                    <source src="project\petville4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Petshop Project<br>Contacts</figcaption>
+                <br>
+            </figure>
+			</div>
+        </section>
+    </main>
+
+        <footer>
+            <div class="footernav">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="headernav" target="_blank">HOME</a></li>
+                        <li>|</li>
+                        <li><a href="about.html" class="headernav" target="_blank">ABOUT</a></li>
+                        <li>|</li>
+                        <li><a href="#portfolio" class="headernav">Back to Top</a></li>
+                        <li>|</li>
+                        <li><a href="contact.html" class="headernav" target="_blank">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+    </body>
+</html>

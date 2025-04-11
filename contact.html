@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Contact Me</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" 
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            .playfair-display-<uniquifier> {
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            .roboto-slab-<uniquifier> {
+                font-family: "Roboto Slab", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            body {
+                background-color: #fff8ed;
+                font-family: "Roboto Slab", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                background-color: #fff8ed;
+            }
+            .headerbar {
+                display:flex;
+                padding-bottom: 1%;
+                margin-bottom: 2%;
+                border-bottom: 1px solid #0b6623;
+            }
+            .titlename {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                left: 2%;
+                width: 30%;
+                text-align: center;
+            }
+            #contact {
+                text-decoration: none;
+	            color: #0b6623;
+                font-size: 2.5vw;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+            }
+            #contact:hover {
+                background-color: #0b6623;
+			    font-size: 3vw;
+			    border-radius: 5px;
+                color: white;
+            }
+            .namedescription {
+                font-size: 1.5vw;
+                font-weight: normal;
+                text-align: center;
+            }
+            .navbar {
+                position:absolute;
+                right: 0;
+                width: 60%;
+                margin-top: 1%;
+                font-size: 1.6vw;
+                padding-right: 1%;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            nav ul {
+	            list-style: none;
+	            text-align: end;
+            }
+            nav ul li {
+	            display: inline;
+	            margin: 0 0.8vw;
+            }
+            .contactnav {
+                text-decoration: none;
+	            color: #0b6623;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+            }
+            .contactnav:hover {
+                background-color: #0b6623;
+			    font-size: 1.9vw;
+			    border-radius: 5px;
+                color: white;
+            }
+            .headernav {
+	            text-decoration: none;
+	            color: black;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+		    }
+		    .headernav:hover {
+			    background-color: #0b6623;
+			    font-size: 1.9vw;
+			    border-radius: 5px;
+                color: white;
+		    }
+            @keyframes transformExample {
+                0% {transform: rotate(-5deg);}
+                50% {transform: rotate(5deg) scale(1.0);}
+                100% {transform: rotate(-5deg) scale(1.0);}
+            }
+            .contactheading {
+                width: 100%;
+                height: auto;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                font-size: 2.2vw;
+                font-weight: normal;
+                text-align: center;
+                color: #0b6623;
+                padding: 0;
+                animation: transformExample 2s infinite;
+            }
+            .contactpage {
+                display: flex;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                margin-bottom: 3%;
+            }
+            .firstpic {
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                border-right: 1px solid #0b6623;
+            }
+            img {
+                max-width: 80%;
+            }
+            .contactdetails {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                justify-content: center;
+                text-align: center;
+                width: 65%;
+            }
+            .contactcontent {
+                display: flex;
+                position: relative;
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+            .icon {
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                width: 20%;
+                margin-right: 2vw;
+            }
+            .fa {
+                padding: 25%;
+                font-size: 2.5vw;
+                width: 30%;
+                text-align: center;
+                text-decoration: none;
+                margin: 2%;
+                border-radius: 50%;
+            }
+            .fa:hover {
+                opacity: 0.5;
+            }
+            .fa-facebook {
+                background: #0b6623;
+                color: white;
+            }
+            .fa-google {
+                background: #0b6623;
+                color: white;
+            }
+            .fa-phone {
+                background: #0b6623;
+                color: white;
+            }
+            .sitelink {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                justify-content: center;
+                width: 60%;
+            }
+            .site {
+                display: flex;
+                position: relative;
+                width: 90%;
+                font-family: "Playfair Display", serif;
+                font-weight: <weight>;
+                font-style: normal;
+                font-size: 2vw;
+                font-weight: normal;
+                text-align: center;
+                color: #0b6623;
+            }
+            .link {
+                display: flex;
+                position: relative;
+                width: 90%;
+                text-decoration: none;
+                font-size: 1.5vw;    
+            }
+            .link a {
+                text-decoration: none;  
+                color:black;
+                transition: font-size 0.3s ease;
+            }
+            .link a:hover {
+                font-size: 1.7vw;
+                color: #0b6623;
+            }
+            .footernav {
+                display:flex;
+                position:absolute;
+                justify-content: center;
+                text-align: center;
+                font-size: 1.6vw;
+                width: 99%;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                border-top: 1px solid #0b6623;
+            }
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            main {
+                animation: fadeInUp 1.3s ease-in-out;
+            }
+            .animated-image:hover {
+                transform: scale(1.1);
+            }
+            
+            @media screen and (max-width:320px) {
+                .contactpage {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-bottom: 0;
+                }
+                .firstpic {
+                    border-right: none;
+                    margin-bottom: 5%;
+                    margin-top: 5%;
+                }
+                .contactdetails {
+                    margin-bottom: 5%;
+                }
+                .footernav {
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    justify-items: center;
+                    max-width: 100%;
+                }
+                .footernav nav ul {
+                    padding: 0;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="headerbar">
+                <div class="titlename">
+                    <a href="index.html" id="contact" target="_blank">ELMO MAGTANGOB<br></a>
+                    <article class="namedescription">BSIT 1-Y2-6</article>
+                </div>
+
+                <div class="navbar">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="headernav" target="_blank">HOME</a></li>
+                            <li>|</li>
+                            <li><a href="about.html" class="headernav" target="_blank"">ABOUT</a></li>
+                            <li>|</li>
+                            <li><a href="portfolio.html" class="headernav" target="_blank">PORTFOLIO</a></li>
+                            <li>|</li>
+                            <li><a href="#contact" class="contactnav">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section>
+            <div class="contactheading">
+                <h1 class="contacttitle">Contact Me:</h1>
+            </div>
+            <div class="contactpage">
+    
+                <div class="firstpic">
+                    <img class="animated-image" src="images\meh.jpg" class="image" alt="Photo of Elmo A. Magtangob">
+                </div>
+        
+                <div class="contactdetails">
+    
+                    <div class="contactcontent">
+                        <div class="icon">
+                            <a href="https://www.facebook.com/elmogumogu/" class="fa fa-facebook" target="_blank"></a>
+                        </div>
+                        
+                        <div class="sitelink">
+                            <div class="site">
+                                <h3 class="name">Facebook</h3>
+                            </div>
+
+                            <div class="link">
+                                <p><a href = "https://www.facebook.com/elmogumogu/" target="_blank">https://www.facebook.com/elmogumogu</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contactcontent">
+                        <div class="icon">
+                            <a href="mailto:jamagtangob0667qc@sudent.fatima.edu.ph" class="fa fa-google" target="_blank"></a>
+                        </div>
+
+                        <div class="sitelink">
+                            <div class="site">
+                                <h3 class="name">Gmail</h3>
+                            </div>
+
+                            <div class="link">
+                                <p><a href="mailto:jamagtangob0667qc@sudent.fatima.edu.ph" target="_blank">jamagtangob0667qc@student.fatima.edu.ph </a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="contactcontent">
+                        <div class="icon">
+                            <a href="#" class="fa fa-phone"></a>
+                        </div>
+
+                        <div class="sitelink">
+                            <div class="site">
+                                <h3 class="name">Contact No:</h3>
+                            </div>
+
+                            <div class="link">
+                                <p><a href="#">0962-521-1654</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footernav">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="headernav" target="_blank">HOME</a></li>
+                        <li>|</li>
+                        <li><a href="about.html" class="headernav" target="_blank">ABOUT</a></li>
+                        <li>|</li>
+                        <li><a href="portfolio.html" class="headernav" target="_blank">PORTFOLIO</a></li>
+                        <li>|</li>
+                        <li><a href="#contact" class="headernav">Back to Top</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

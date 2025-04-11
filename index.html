@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Elmo Magtangob</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" 
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        
+        <style>
+            .playfair-display-<uniquifier> {
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            .roboto-slab-<uniquifier> {
+                font-family: "Roboto Slab", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            body {
+                font-family: "Roboto Slab", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                background-color: #fff8ed;
+            }
+            .headerbar {
+                display:flex;
+                margin-bottom: 2%;
+                padding-bottom: 1%;
+                border-bottom: 1px solid #0b6623;
+                width: 100%;
+            }
+            .titlename {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                left: 2%;
+                width: 30%;
+                text-align: center;
+            }
+            #home {
+                width: 100%;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                text-decoration: none;
+	            color: #0b6623;
+                font-size: 2.5vw;
+                font-weight: normal;
+                text-align: center;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+            }
+            #home:hover {
+                background-color: #0b6623;
+			    font-size: 3vw;
+			    border-radius: 5px;
+                color: white;
+            }  
+            .namedescription {
+                font-size: 1.5vw;
+                font-weight: normal;
+                text-align: center;
+            }
+            .navbar {
+                position:absolute;
+                right: 0;
+                width: 60%;
+                margin-top: 1%;
+                font-size: 1.6vw;
+                padding-right: 1%;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            nav ul {
+	            list-style: none;
+	            text-align: end;
+            }
+            nav ul li {
+	            display: inline;
+	            margin: 0 0.8vw;
+            }
+            .homenav {
+                text-decoration: none;
+	            color: #0b6623;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+            }
+            .homenav:hover {
+			    background-color: #0b6623;
+			    font-size: 1.9vw;
+			    border-radius: 5px;
+                color: white;
+		    }
+            .headernav {
+	            text-decoration: none;
+	            color: black;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+		    }
+		    .headernav:hover {
+			    background-color: #0b6623;
+			    font-size: 1.9vw;
+			    border-radius: 5px;
+                color: white;
+		    }
+            .homepage {
+                display: flex;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                margin-bottom: 3%;
+            }
+            .firstpic {
+                display: flex;
+                align-items: center;
+                position: relative;
+                justify-content: center;
+                width: 40%;
+                border-right: 1px solid #0b6623;
+            }
+            img {
+                max-width: 35vw;
+            }
+            .summary {
+                position: relative;
+                width: 60%;
+                justify-content: center;
+            }
+            @keyframes transformExample {
+                0% {transform: rotate(-5deg);}
+                50% {transform: rotate(5deg) scale(1.0);}
+                100% {transform: rotate(-5deg) scale(1.0);}
+            }
+            .homename {
+                position: relative;
+                max-width: 100%;
+                text-align: center;
+                animation: transformExample 2.5s infinite;
+            }
+            .name {
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                font-size: 5vw;
+                font-weight: normal;
+                text-align: center;
+                color: #0b6623;
+                line-height: 1;
+            }
+            .summarydescription {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 5%;
+                width: 90%;
+            }
+            .desc {
+                display: flex;
+            }
+            p.description {
+                text-align:justify;
+                text-indent: 5%;
+                font-weight: normal;
+                font-size: 1.4vw;
+                line-height: 1.5;
+            }
+            .sampleprojects {
+                display: flex;
+                position: relative;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 2%;
+                padding-bottom: 2%;
+            }
+            .projectheading {
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                width: 40%;
+                color: #0b6623;
+                border-top: 1px solid #0b6623;
+            }
+            .projectheading h2 {
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-size: 3vw;
+                font-weight: <weight>;
+                font-style: normal;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+            }
+            .projectheading h2:hover {
+                background-color: #0b6623;
+			    font-size: 3.4vw;
+			    border-radius: 5px;
+                color: white;
+            }
+            .sampleworks {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                justify-content: center;
+                max-width: 40vw;
+                padding-left: 15vw;
+                padding-right: 15vw;
+            }
+            .images {
+                border: 1px solid #0b6623;
+    		    padding: 1%;
+                max-width: 80vw;
+			    border-radius: 7px;
+                text-align: center;
+            }
+            .sampleworks figcaption {
+                padding-top: 2vw;
+                font-size: 1.5vw;
+            }
+            video {
+                max-width: 30vw;
+                max-height: auto;
+                border-radius: 5px;
+                animation: fadeInUp 1.5s ease-in-out;
+                transition: tranform 1.5s ease;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                border: 1px solid #0b6623;
+            }
+            video:hover {
+                transform: scale(1.3);
+            }
+            .footernav {
+                display:flex;
+                position:absolute;
+                justify-content: center;
+                text-align: center;
+                width: 98%;
+                font-size: 1.6vw;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                border-top: 1px solid #0b6623;
+            }
+            @media screen and (max-width:320px) {
+                video {
+                    max-width: 45vw;
+                }
+                img {
+                    max-width: 40vw;
+                }
+                .footernav {
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    justify-items: center;
+                    max-width: 100%;
+                    left: 0;
+                }
+                .footernav nav ul {
+                    padding: 0;
+                }
+                .projectheading h2 {
+                    font-size: 4vw;
+                }
+                .projectheading h2:hover {
+			        font-size: 4.4vw;
+                }
+                .homepage {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-bottom: 0;
+                }
+                .firstpic {
+                    border-right: none;
+                    width: 100%;
+                    margin-bottom: 2vw;
+                    margin-top: 2vw;
+                }
+                .summary {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 2vw;
+                    width: 100%;
+                    justify-content: center;
+                }
+                .homename {
+                    width: 70%;
+                }
+                .summarydescription {
+                    margin-left: 0;
+                }
+            }
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            main {
+                animation: fadeInUp 1.3s ease-in-out;
+            }
+            @media screen and (max-width: 320px) {
+                .headerbar, .homepage, .sampleprojects, .footernav {
+                    width: 100%; 
+                }
+            }
+        </style>
+	</head>
+
+	<body>
+    <header>
+        <div class="headerbar">
+
+            <div class="titlename">
+                <a href="#" id="home">ELMO MAGTANGOB<br></a>
+                <article class="namedescription">BSIT 1-Y2-6</article>
+            </div>
+
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="homenav">HOME</a></li>
+                        <li>|</li>
+                        <li><a href="about.html" class="headernav" target="_blank">ABOUT</a></li>
+                        <li>|</li>
+                        <li><a href="portfolio.html" class="headernav" target="_blank">PORTFOLIO</a></li>
+                        <li>|</li>
+                        <li><a href="contact.html" class="headernav" target="_blank">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+        <div class="homepage">
+
+            <div class="firstpic">
+                <img src="images\meh4.jpg" class="image" alt="Photo of Juan Elmo A. Magtangob">
+            </div>
+    
+            <div class="summary">
+
+                <div class="homename">
+                    <h1 class="name">WELCOME TO MY PORTFOLIO!</h1>
+                </div>
+
+                <div class="summarydescription">
+                    <div class="desc">
+                        <p class="description">
+                            Hello world! I am Juan Elmo A. Magtangob, a first year student from
+                             Our Lady of Fatima University who is currently taking BS Information Technology. 
+                            Though I am new to this field, I am doing my best to learn the different techniques
+                             and ways of programming, and apply the things I learned to my projects. <br>
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p class="description">
+                            In this portfolio, I will showcase my skills and projects, and you will get to know about
+                            the start of my journey as an IT student. Whether you're here to see my work or to get to
+                             know me better, I hope I impart some of my knowledge, creativity, and my passion for
+                              programming to you as you continue viewing my website. If you ever have any suggestions,
+                               feel free to reach me through my contact details on the contact page.
+                                Thank you for visiting!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </section>
+
+        <section>
+        <div class="sampleprojects">
+
+            <div class="projectheading">
+                <h2>Sample Works</h2>
+            </div>
+
+            <div class="sampleworks">
+                <figure class="images">
+                    <video class="animated-vid" controls>
+                        <source src="animations\animation1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>HTML Animations<br>Examples 1-3</figcaption>
+					<br>
+				</figure>
+
+                <figure class="images">
+                    <video class="animated-vid" controls>
+                        <source src="animations\animation2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>HTML Animations<br>Examples 4-5</figcaption>
+					<br>
+				</figure>
+            </div>
+        </div>
+        </section>
+
+        </main>
+        
+        <footer>
+            <div class="footernav">
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="headernav">Back to Top</a></li>
+                        <li>|</li>
+                        <li><a href="about.html" class="headernav" target="_blank">ABOUT</a></li>
+                        <li>|</li>
+                        <li><a href="portfolio.html" class="headernav" target="_blank">PORTFOLIO</a></li>
+                        <li>|</li>
+                        <li><a href="contact.html" class="headernav" target="_blank">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </body>
+</html>

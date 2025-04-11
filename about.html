@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>About Me</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" 
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        
+
+        <style>
+            .playfair-display-<uniquifier> {
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            .roboto-slab-<uniquifier> {
+                font-family: "Roboto Slab", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            body {
+                background-color: #fff8ed;
+                font-family: "Roboto Slab", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            .headerbar {
+                display:flex;
+                margin-bottom: 2%;
+                padding-bottom: 1%;
+                border-bottom: 1px solid #0b6623;
+                width: 100%;
+            }
+            .titlename {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                left: 2%;
+                width: 30%;
+                text-align: center;
+            }
+            #about {
+                text-decoration: none;
+	            color: #0b6623;
+                font-size: 2.5vw;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+            }
+            #about:hover {
+                background-color: #0b6623;
+			    font-size: 3vw;
+			    border-radius: 5px;
+                color: white;
+            }
+            .namedescription {
+                font-size: 1.5vw;
+                font-weight: normal;
+                text-align: center;
+                width: 100%;
+            }
+            .navbar {
+                position:absolute;
+                right: 0;
+                width: 60%;
+                margin-top: 1%;
+                font-size: 1.6vw;
+                padding-right: 1%;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            nav ul {
+	            list-style: none;
+	            text-align: end;
+            }
+            nav ul li {
+	            display: inline;
+	            margin: 0 0.8vw;
+            }
+            .aboutnav {
+                text-decoration: none;
+	            color: #0b6623;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+            }
+            .aboutnav:hover {
+                background-color: #0b6623;
+			    font-size: 1.9vw;
+			    border-radius: 5px;
+                color: white;
+            }
+            .headernav {
+	            text-decoration: none;
+	            color: black;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+		    }
+		    .headernav:hover {
+			    background-color: #0b6623;
+			    font-size: 1.9vw;
+			    border-radius: 5px;
+                color: white;
+		    }
+            .aboutpage {
+                display: flex;
+                padding: 1%;
+                padding-bottom: 1%;
+                border-bottom: 1px solid #0b6623;
+            }
+            @keyframes transformExample {
+                0% {transform: scale(1.0);}
+                50% {transform: scale(1.1);}
+                100% {transform: scale(1.0);}
+            }
+            .start {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                justify-content: center;
+                width: 40%;
+                height: 30%;
+            }
+            .aboutname {
+                display: flex;
+                position:relative;
+                width: 100%;
+                height: 30%;
+                justify-content: center;
+                align-items: center;
+                padding: 1%;
+                margin-right: 0;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                animation: transformExample 2s infinite;
+            }
+            .name {
+                font-size: 4vw;
+                font-weight: normal;
+                text-align: center;
+                color:#0b6623;
+            }
+            .pic {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                left: 1%;
+                right: 1%;
+                max-width: 80%;
+                max-height: 30%;
+            }
+            img {
+                max-width: 100%;
+                max-height: 75%;
+            }
+            .aboutdescription {
+                display: flex;
+                flex-wrap: wrap;
+                width: 58%;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+            } 
+            .desc {
+                display: flex;
+                margin-bottom: 5%;
+            }
+            .description {
+                text-align:justify;
+                align-items: center;
+                text-indent: 5%;
+                font-size: 1.4vw;
+                width: 100%;
+                margin: 0;
+                height: auto;
+                line-height: 1.5;
+            }
+            .aboutcontent {
+                display: flex;
+                padding: 0;
+                width: auto;
+                height: auto;
+            }
+            .skills {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                width: 50%;
+                height: 50%;
+                padding-top: 0;
+                margin-top: 2vw;
+                margin-bottom: 3vw;
+            }
+            .skillsheading {
+                display: flex;
+                position: relative;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            .skillsheading h2 {
+                font-size: 2.7vw;
+                font-weight: bold;
+                text-align: center;
+                color: #0b6623;
+                line-height: 1;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+            }
+            .skillsheading h2:hover {
+                background-color: #0b6623;
+			    font-size: 3vw;
+			    border-radius: 5px;
+                color: white;
+            }
+            .skillset {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                align-items: flex-start;
+                width: 60%;
+                height: 20%;
+            }
+            .skilllist {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                line-height: 0;
+                list-style: none;
+	            text-align: center;
+                padding-left: 0;
+            }
+            .skillz {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                font-size: 1.5vw;
+                width: 100%;
+            }
+            .certifications {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                width: 50%;
+            }
+            .certheadings {
+                display: flex;
+                position: relative;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                justify-content: center;
+                margin-top: 3vw;
+            }
+            .certheadings h2 {
+                font-size: 2.7vw;
+                font-weight: bold;
+                text-align: center;
+                color: #0b6623;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+            }
+            .certheadings h2:hover {
+                background-color: #0b6623;
+			    font-size: 2.9vw;
+			    border-radius: 5px;
+                color: white;
+            }
+            .certlist {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                line-height: 0;
+                list-style: none;
+	            text-align: center;
+                padding-left: 0;
+                margin-bottom: 5vw;
+            }
+            p.certy {
+                font-size: 1.5vw;
+            }
+            .education {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                width: 98%;
+                padding: 1%;
+                justify-content: center;
+                text-align: center;
+                border-top: 1px solid #0b6623;
+                margin-bottom: 1%;
+            }
+            .educheading {
+                display: flex;
+                align-items: start;
+                position: relative;
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                margin-bottom: 0;
+            }
+            .educname {
+                font-size: 2.7vw;
+                font-weight: bold;
+                text-align: center;
+                color: #0b6623 ;
+                line-height: 1;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                transition: background-color 0.3s ease, font-size 0.3s ease;
+		    }
+		    .educname:hover {
+			    background-color: #0b6623;
+			    font-size: 3.2vw;
+			    border-radius: 5px;
+                color: white;
+		    }
+            .educset {
+                display:flex;
+                flex-wrap: nowrap;
+                position: relative;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding-left: 3%;
+            }
+            article {
+                width: 90%;
+            }
+            .educlevel {
+                display: flex;
+                position: relative;
+                width: 90%;
+                justify-content: center;
+                text-align: center;
+                flex-wrap: wrap;
+                border-radius: 5px;
+            }
+            .eductitle {
+                position: relative;
+                width: 90%;
+                text-align: center;
+            }
+            .title {
+                font-size: 1.7vw;
+                font-weight: normal;
+                text-align: center;
+                color: black;
+                line-height: 1;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+            .educschool {
+                display: flex;
+                position: relative;
+                width: 90%;
+                color: #0b6623;
+                list-style: none;
+	            text-align: center;
+                justify-content: center;
+            }
+            p.school {
+                font-size: 1.5vw;
+            }
+            .footernav {
+                display: flex;
+                position: absolute;
+                text-align: center;
+                justify-content: center;
+                width: 99%;
+                font-size: 1.6vw;
+                font-family: "Playfair Display", serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                border-top: 1px solid #0b6623;
+                left: 0;
+            }
+            @media screen and (max-width:768px) {
+                .footernav {
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    justify-items: center;
+                    max-width: 100%;
+                }
+                .footernav nav ul {
+                    padding: 0;
+                }
+            }
+            @media screen and (max-width:320px) {
+                .footernav {
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    justify-items: center;
+                }
+                .footernav nav ul {
+                    padding: 0;
+                }
+                .headerbar, .homepage, .sampleprojects, .footernav {
+                    width: 100%; 
+                }
+                .aboutpage {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                .start {
+                    width: 100%;
+                }
+                .aboutdescription {
+                    width: 70%;
+                }
+                .pic {
+                    height: 70%;
+                    margin-bottom: 4vw;
+                }
+                .name {
+                    font-size: 5vw;
+                };
+                h2 {
+                    font-size: 3vw;
+                }
+            }
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            main {
+                animation: fadeInUp 1.3s ease-in-out;
+            }
+        </style>
+	</head>
+
+	<body>
+        <header>
+            <div class="headerbar">
+                <div class="titlename">
+                    <a href="index.html" id="about" target="_blank">ELMO MAGTANGOB<br></a>
+                    <article class="namedescription">BSIT 1-Y2-6</article>
+                </div>
+
+                <div class="navbar">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="headernav" target="_blank">HOME</a></li>
+                            <li>|</li>
+                            <li><a href="#about" class="aboutnav">ABOUT</a></li>
+                            <li>|</li>
+                            <li><a href="portfolio.html" class="headernav" target="_blank">PORTFOLIO</a></li>
+                            <li>|</li>
+                            <li><a href="contact.html" class="headernav" target="_blank">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section>
+            <div class="aboutpage">
+
+                <div class="start">
+                    <div class="aboutname">
+                        <h1 class="name">I AM ELMO</h1>
+                    </div>
+    
+                    <div class="pic">
+                    <img src="images\meh2.jpg" class="image" alt="Photo of Juan Elmo A. Magtangob">
+                    </div>
+                </div>
+               
+                <div class="aboutdescription">
+                    <div class="desc">
+                        <p class="description">
+                            As a first year student of Information Technology, I have only started walking the 
+                            path of a programmer. Even though what I am about is only the basics of programming, 
+                            it would definitely be wrong for me to say that it's easy. Programming comes in different 
+                            languages, and in learning these languages, I become more knowledgable about the know-hows 
+                            of the projects that involve programming such as websites and the systems made from C language. 
+                            Learning about programming has also helped me developed my skills in problem-solving, especially 
+                            when it comes to debugging where you have to find the fault in your program to find out why there's 
+                            an error on the output.<br>
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p class="description">
+                            I have not yet found what specialization I would take in the future as an IT, but programming has 
+                            been very fun and challenging that I am considering on dedicating my studies in programming. As I 
+                            continue learning and growing as a programmer, I get excited thinking about the real-world challenges 
+                            that I would face in the future. Thinking about how I would make programs that will satisfy my clients 
+                            or solve problems that can only be done through innovation and hardwork, makes me strive to be better 
+                            and do my best for my future. 
+                        </p>
+                </div>
+
+            </div>
+            </section>
+
+            <section>
+                <div class="aboutcontent">
+                    <div class="skills">
+                        <div class="skillsheading">
+                            <h2>Skills</h2>
+                        </div>
+
+                        <div class="skillset">
+                            <div class="skilllist">
+                                <p class="skillz">C Language Programming (Basics)</p><br>
+                                <p class="skillz">HTML/CSS Programming (Basics)</p><br>
+                                <p class="skillz">Memorization</p><br>
+                                <p class="skillz">Problem-solving</p><br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certifications">
+                        <div class="certheadings">
+                            <h2>Certifications</h2>
+                        </div>
+
+                        <div class="certlist">
+                            <p class="certy">Dean's Lister | 1st Semester (2024)</p>
+                            <p class="certy">With High Honors Graduate | Senior High School (2021)</p>
+                            <p class="certy">With High Honors Graduate | Junior High School (2021)</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section>
+                <div class="education">
+
+                    <div class="educheading">
+                        <h2 class="educname">Education</h2>
+                    </div>
+
+                    <div class="educset">
+                        <article>
+                            <div class="educlevel">
+                                <div class="eductitle">
+                                    <h3 class="title">Bachelor of Science in Information Technology</h3>
+                                </div>
+
+                                <div class="educschool">
+                                    <p class="school">Our Lady of Fatima University<br>2024 - Present</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article>
+                            <div class="educlevel">
+                                <div class="eductitle">
+                                    <h3 class="title">Senior High School</h3>
+                                </div>
+
+                                <div class="educschool">
+                                    <p class="school">Novaliches High School<br>2019 - 2021</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article>
+                            <div class="educlevel">
+                                <div class="eductitle">
+                                    <h3 class="title">Junior High School</h3>
+                                </div>
+
+                                <div class="educschool">
+                                    <p class="school">Novaliches High School<br>2015 - 2019</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article>
+                            <div class="educlevel">
+                                <div class="eductitle">
+                                    <h3 class="title">Elementary School</h3>
+                                </div>
+
+                                <div class="educschool">
+                                    <p class="school">Rosa L. Susano Novaliches Elementary School<br>2009 - 2015</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footernav">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="headernav" target="_blank">HOME</a></li>
+                        <li>|</li>
+                        <li><a href="#about" class="headernav">Back to Top</a></li>
+                        <li>|</li>
+                        <li><a href="portfolio.html" class="headernav" target="_blank">PORTFOLIO</a></li>
+                        <li>|</li>
+                        <li><a href="contact.html" class="headernav" target="_blank">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+    </body>
+</html>
